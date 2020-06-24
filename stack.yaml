@@ -4,15 +4,25 @@ packages:
 - .
 
 extra-deps:
-- /Users/rjhala/research/liquidhaskell
-- /Users/rjhala/research/liquidhaskell/liquid-ghc-prim
-- /Users/rjhala/research/liquidhaskell/liquid-base
-- /Users/rjhala/research/liquidhaskell/liquid-fixpoint
+# Required for the 8.10.1 build
 - text-format-0.3.2
 - optics-0.2
-# Required for the 8.10.1 build
 - Diff-0.3.4
 - aeson-1.4.7.1
+
+- git: https://github.com/ucsd-progsys/liquidhaskell
+  commit: 56d0007e9258a507835ff995acf6c5592262af49
+ 
+- git: https://github.com/ucsd-progsys/liquidhaskell
+  commit: 56d0007e9258a507835ff995acf6c5592262af49
+  subdirs:
+      - liquid-base
+      - liquid-ghc-prim
+        #      - liquid-containers
+
+- git: https://github.com/ucsd-progsys/liquid-fixpoint
+  commit: a4e303bc55e8f596893e661954e20c983a61215f
+
 - git: https://github.com/well-typed/optics.git
   commit: 0a4940cc927df3f50151692282f8b148bf326886
   subdirs:

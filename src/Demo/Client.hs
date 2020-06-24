@@ -2,6 +2,14 @@ module Demo.Client where
 
 import Demo.Lib
 
-{-@ foo :: _ -> Nat @-}
-foo :: Int -> Int
-foo n = if n < 0 then 0 else incr n
+{-@ incr' :: Nat -> Nat @-}
+incr' :: Int -> Int 
+incr' x = x + 1 
+
+-- fails with ghcid
+{-@ fails_with_ghcid :: Nat -> Nat @-}
+fails_with_ghcid n = incr n
+
+-- succeeds with ghcid
+{-@ succeeds_with_ghcid :: Nat -> Nat @-}
+succeeds_with_ghcid n = incr' n
