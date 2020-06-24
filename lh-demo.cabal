@@ -1,0 +1,25 @@
+cabal-version: 1.12
+
+name:           lh-demo
+version:        0.1.0.0
+description:    This toy package demonstrates the use of LH as a plugin.
+homepage:
+bug-reports:
+author:         Ranjit Jhala 
+maintainer:     jhala@cs.ucsd.edu
+copyright:      2020 Ranjit Jhala 
+license:        MIT 
+license-file:   LICENSE
+build-type:     Simple
+
+library
+  exposed-modules:
+      Demo.Lib,
+      Demo.Client
+  hs-source-dirs:
+      src
+  build-depends:
+      liquid-base,
+      liquidhaskell
+  default-language: Haskell2010
+  ghc-options: -fplugin=LiquidHaskell
