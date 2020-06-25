@@ -2,14 +2,11 @@ module Demo.Client where
 
 import Demo.Lib
 
-{-@ incr' :: Nat -> Nat @-}
-incr' :: Int -> Int 
-incr' x = x + 1 
+bump :: Int -> Int
+bump n 
+  | 0 <= n    = incr n
+  | otherwise = 0
 
--- fails with ghcid
-{-@ fails_with_ghcid :: Nat -> Nat @-}
-fails_with_ghcid n = incr n
-
--- succeeds with ghcid
-{-@ succeeds_with_ghcid :: Nat -> Nat @-}
-succeeds_with_ghcid n = incr' n
+{-@ ignore thisIsUnsafe @-} -- delete this to see an error
+thisIsUnsafe :: Int -> Int
+thisIsUnsafe x = incr x
