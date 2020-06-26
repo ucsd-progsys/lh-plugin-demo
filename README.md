@@ -11,7 +11,7 @@ This repo demonstrates how to use [LiquidHaskell](https://github.com/ucsd-progsy
 
 - how to point `stack` at the relevant LH repositories
 
-**TODO** `cabal.project` shows
+`cabal.project` shows
 
 - how to point `cabal` to the relevant LH repositories
 
