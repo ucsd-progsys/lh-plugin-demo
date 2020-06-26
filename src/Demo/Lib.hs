@@ -1,16 +1,7 @@
 module Demo.Lib where
 
-{-@ incr :: Nat -> Nat @-}
-incr :: Int -> Int 
-incr x = x - 1
+{-@ type Pos = {v:Int | v > 0} @-}
 
-{-@ zincr :: Nat -> Nat @-}
-zincr :: Int -> Int 
-zincr x = 
-    let tmp = 2 in 
-    x - tmp
-
-
--- foo :: Int -> Int
--- foo x = []
--- • 
+{-@ incr :: Pos -> Pos @-}
+incr :: Int -> Int
+incr x = x + 1

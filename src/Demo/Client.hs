@@ -2,10 +2,7 @@ module Demo.Client where
 
 import Demo.Lib
 
-bump :: Int -> Int
-bump n 
-  | 0 <= n    = incr n
-  | otherwise = 0
+bump n = if n > 0 then incr n else 0
 
 {-@ ignore thisIsUnsafe @-} -- delete this to see an error
 thisIsUnsafe :: Int -> Int

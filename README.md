@@ -23,11 +23,17 @@ By virtue of being a plugin, you now get LH errors
 
 - from all editor plugins based on `ghci` integration
 
-![VS Code](vscode.png)
+### VSCode 
 
-![Neovim](nvim.png)
+![VS Code](vscode.gif)
 
-![Emacs](emacs.png)
+### Vim
+
+![TBD: Neovim](nvim.png)
+
+### Emacs
+
+![TBD: Emacs](emacs.png)
 
 ## GHCID Integration
 
@@ -44,4 +50,5 @@ For `cabal`-based projects, run with
 ```
 $ ghcid -c "cabal v2-repl"
 ```
+
 
