@@ -17,16 +17,31 @@ This repo demonstrates how to use [LiquidHaskell](https://github.com/ucsd-progsy
 
 ## GHCi Integration
 
-By virtue of being a plugin, you now get LH errors in GHCi. Hence,
-we get LH errors from 
+By virtue of being a plugin, you now get LH errors 
 
-- `ghcid` in the terminal, make sure to run with `ghcid -c "stack ghci"`
+- when you (re)load in GHCi. 
 
-- all editor plugins based on `ghci` integration
+- from all editor plugins based on `ghci` integration
 
 ![VS Code](vscode.png)
 
 ![Neovim](nvim.png)
 
 ![Emacs](emacs.png)
+
+## GHCID Integration
+
+Additionally, [`ghcid`](https://github.com/ndmitchell/ghcid) produces LH errors on recompilation 
+
+For `stack`-based projects, run with 
+
+```
+$ ghcid -c "stack ghci"
+```
+
+For `cabal`-based projects, run with 
+
+```
+$ ghcid -c "cabal v2-repl"
+```
 
