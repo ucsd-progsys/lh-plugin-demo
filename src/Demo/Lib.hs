@@ -4,4 +4,4 @@ module Demo.Lib where
 
 {-@ incr :: Pos -> Pos @-}
 incr :: Int -> Int
-incr x = x + 1
+incr x = x - 1

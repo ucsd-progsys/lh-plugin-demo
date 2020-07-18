@@ -29,7 +29,7 @@ By virtue of being a plugin, you now get LH errors
 
 ### Vim
 
-![TBD: Neovim](nvim.png)
+![Vim/Neovim with `ALE` and the `stack-build` linter](nvim.png)
 
 ### Emacs
 
