@@ -25,9 +25,13 @@ By virtue of being a plugin, you now get LH errors
 
 ### VSCode 
 
+VSCode with the `Simple GHC (Haskell) Integration` plugin 
+
 ![VS Code](vscode.gif)
 
 ### Vim
+
+Vim/Neovim with `ALE` and the `stack-build` linter
 
 ![Vim/Neovim with `ALE` and the `stack-build` linter](vim.png)
 
