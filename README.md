@@ -7,11 +7,11 @@ This repo demonstrates how to use [LiquidHaskell](https://github.com/ucsd-progsy
 - how to tell GHC to invoke the plugin
 - how to specify the relevant LH wrapper packages as dependencies
 
-`stack.yaml` shows
+[stack.yaml](stack.yaml) shows
 
 - how to point `stack` at the relevant LH repositories
 
-`cabal.project` shows
+[cabal.project](cabal.project) shows
 
 - how to point `cabal` to the relevant LH repositories
 
@@ -37,7 +37,8 @@ Vim/Neovim with `ALE` and the `stack-build` linter
 
 ### Emacs
 
-![TBD: Emacs](emacs.png)
+![Doom/Emacs with `dante`](emacs.png)
+
 
 ## GHCID Integration
 
@@ -55,4 +56,9 @@ For `cabal`-based projects, run with
 $ ghcid -c "cabal v2-repl"
 ```
 
+## Importing Specifications across Packages
+
+The plugin also ensures that specifications written for one 
+package are used when checking client packages. For an example, 
+see the associated [lh-plugin-demo-client package](https://github.com/ucsd-progsys/lh-plugin-demo-client/).
 
