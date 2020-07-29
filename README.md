@@ -29,16 +29,16 @@ VSCode with the `Simple GHC (Haskell) Integration` plugin
 
 ![VS Code](vscode.gif)
 
+### Emacs
+
+![Doom/Emacs with `dante`](emacs.gif)
+
+
 ### Vim
 
 Vim/Neovim with `ALE` and the `stack-build` linter
 
 ![Vim/Neovim with `ALE` and the `stack-build` linter](vim.png)
-
-### Emacs
-
-![Doom/Emacs with `dante`](emacs.png)
-
 
 ## GHCID Integration
 
