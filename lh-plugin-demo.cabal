@@ -20,6 +20,6 @@ library
       src
   build-depends:
       liquid-base,
-      liquidhaskell
+      liquidhaskell >= 0.8.10
   default-language: Haskell2010
   ghc-options: -fplugin=LiquidHaskell

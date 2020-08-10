@@ -4,11 +4,7 @@ packages:
 extra-deps:
   - text-format-0.3.2
   - Diff-0.3.4
-  - git: https://github.com/ucsd-progsys/liquidhaskell
-    commit: 26cad4f05171669949fd92fa5a5f584a4950ca7b
-    subdirs:
-      - .
-      - liquid-base
-      - liquid-ghc-prim
-  - git: https://github.com/ucsd-progsys/liquid-fixpoint
-    commit: a4e303bc55e8f596893e661954e20c983a61215f
+  - liquid-fixpoint-0.8.10.1
+  - liquidhaskell-0.8.10.1
+  - liquid-base-4.14.0.0
+  - liquid-ghc-prim-0.6.1
