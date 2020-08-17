@@ -1,6 +1,8 @@
+
 module Demo.Client where
 
 import Demo.Lib
 
-bump :: Int -> Int
-bump n = incr n
+{-@ reflect bob @-}
+bob :: Int -> Int
+bob k = add 10 k
