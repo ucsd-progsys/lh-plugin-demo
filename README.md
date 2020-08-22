@@ -31,6 +31,12 @@ By virtue of being a plugin, you now get LH errors
 
 - from all editor plugins based on `ghci` integration
 
+### GHCID
+
+VSCode running `ghcid` in a terminal 
+
+![ghcid](ghcid.gif)
+
 ### VSCode 
 
 VSCode with the `Simple GHC (Haskell) Integration` plugin 
