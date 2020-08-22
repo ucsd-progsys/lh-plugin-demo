@@ -3,4 +3,4 @@ module Demo.Client where
 import Demo.Lib
 
 bump :: Int -> Int
-bump n = incr n
+bump n = if n > 0 then incr n else 0
