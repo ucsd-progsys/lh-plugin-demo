@@ -1,10 +1,7 @@
 {-@ LIQUID "--short-names" @-}
 
 module Demo.Total where
-
 import Prelude hiding (head)
-
-
 
 --  head ----------------------------------------------------------------------
 -- head :: [a] -> a
@@ -13,7 +10,6 @@ import Prelude hiding (head)
 head :: [a] -> a 
 head (x:xs) = x
 head []     = error "oops the list is empty!" 
-
 
 {-@ type NonEmptyList thing = {v:[thing] | listSize v > 0} @-} 
 
@@ -28,12 +24,6 @@ head []     = error "oops the list is empty!"
 listSize :: [a] -> Int
 listSize [] = 0
 listSize (x:xs) = 1 + listSize xs
-
-
-
-
-
-
 
 -- average ------------------------------------------------------------------
 
@@ -77,9 +67,7 @@ group (x:xs)   = (x:ys) : group zs
 
 
 -- >>> rev [1,2,3,4,5]
--- <interactive>:9285:2-4: error:
---     • Variable not in scope: rev :: [a0] -> t
---     • Perhaps you meant ‘rem’ (imported from Prelude)
+-- [5,4,3,2,1]
 --
 
 {-@ rev :: xs:_ -> {out:_ | listSize out = listSize xs} @-}
