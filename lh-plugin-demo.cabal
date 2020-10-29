@@ -15,11 +15,18 @@ build-type:     Simple
 library
   exposed-modules:
       Demo.Lib,
-      Demo.Client
+      Demo.Client,
+      Demo.Total, 
+      Demo.Vectors,
+      Demo.Sort,
+      Demo.Maps
   hs-source-dirs:
       src
   build-depends:
       liquid-base,
+      liquid-prelude,
+      liquid-containers,
+      liquid-vector,
       liquidhaskell >= 0.8.10
   default-language: Haskell2010
   ghc-options: -fplugin=LiquidHaskell

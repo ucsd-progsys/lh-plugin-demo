@@ -1,10 +1,30 @@
-resolver: nightly-2020-06-25
+
+resolver: lts-16.8
+
+compiler: ghc-8.10.2
+
+allow-newer: true
+
 packages:
   - .
+
 extra-deps:
   - text-format-0.3.2
-  - Diff-0.3.4
-  - liquid-fixpoint-0.8.10.1
-  - liquidhaskell-0.8.10.1
-  - liquid-base-4.14.0.0
-  - liquid-ghc-prim-0.6.1
+  - Diff-0.4.0
+  - optics-0.3
+  - optics-core-0.3
+  - optics-th-0.3
+  - optics-extra-0.3
+  - th-compat-0.1
+
+  - git: https://github.com/ucsd-progsys/liquidhaskell
+    commit: 7abfede6902a9b51deff627f883edca7e14112a0
+    subdirs:
+      - .
+      - liquid-base
+      - liquid-ghc-prim
+      - liquid-prelude
+      - liquid-containers
+      - liquid-vector
+  - git: https://github.com/ucsd-progsys/liquid-fixpoint
+    commit: 1fd4f5f9d8f8f1e624e58ac72fc5119d4d2f6160

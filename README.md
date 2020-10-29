@@ -1,5 +1,42 @@
 # LiquidHaskell as a GHC Plugin
 
+
+
+
+
+
+
+
+
+
+
+
+
+## DEMO
+
+1. Total.hs
+2. Vectors.hs
+3. Sort.hs
+4. Maps.hs 
+5. Voltron
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 This repo demonstrates how to use [LiquidHaskell](https://github.com/ucsd-progsys/liquidhaskell) as a GHC plugin.
 
 `lh-plugin-demo.cabal` shows 
