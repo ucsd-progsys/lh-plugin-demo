@@ -14,12 +14,6 @@ build-type:     Simple
 
 library
   exposed-modules:
-      Demo.Lib,
-      Demo.Client,
-      Demo.Total, 
-      Demo.Vectors,
-      Demo.Sort,
-      Demo.Maps,
       Demo.Bug
   hs-source-dirs:
       src
