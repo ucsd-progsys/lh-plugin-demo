@@ -1,3 +1,7 @@
+{-# LANGUAGE CPP #-}
+
+{-@ LIQUID "--prune-unsorted" @-}
+
 module Demo.Lib where
 
 {-@ type Pos = {v:Int | 0 < v} @-}
@@ -17,3 +21,13 @@ data Eg = Eg String
 {-@ measure egLen @-}
 egLen :: Eg -> Int
 egLen (Eg xs) = myLen xs
+
+---
+
+data Box = Box Int
+
+{-@ embed Box as int @-}
+
+{-@ fooBox :: {v:Box | 0 <= v} -> () @-}
+fooBox :: Box -> ()
+fooBox _ = ()

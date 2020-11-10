@@ -33,3 +33,8 @@ lemma acc (x:xs) = lemma (x:acc) xs
 thm :: [a] -> ()
 thm xs = lemma [] xs
 
+
+-----
+--
+
+sillyCall = fooBox (Box 10)

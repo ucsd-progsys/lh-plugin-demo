@@ -19,7 +19,8 @@ library
       Demo.Total, 
       Demo.Vectors,
       Demo.Sort,
-      Demo.Maps
+      Demo.Maps,
+      Demo.Bug
   hs-source-dirs:
       src
   build-depends:

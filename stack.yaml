@@ -17,7 +17,7 @@ extra-deps:
   - th-compat-0.1
 
   - git: https://github.com/ucsd-progsys/liquidhaskell
-    commit: 7abfede6902a9b51deff627f883edca7e14112a0
+    commit: c06fd0b141054d04614af0ce3015d055a7980bce
     subdirs:
       - .
       - liquid-base
@@ -26,4 +26,5 @@ extra-deps:
       - liquid-containers
       - liquid-vector
   - git: https://github.com/ucsd-progsys/liquid-fixpoint
-    commit: 1fd4f5f9d8f8f1e624e58ac72fc5119d4d2f6160
+    commit: 90e19918bc51a2c246909ec1e4edba636077c675
+

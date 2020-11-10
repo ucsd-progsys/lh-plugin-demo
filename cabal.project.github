@@ -3,22 +3,21 @@ packages: .
 source-repository-package
     type: git
     location: https://github.com/ucsd-progsys/liquidhaskell
-    tag: 26cad4f05171669949fd92fa5a5f584a4950ca7b
-
+    tag: c06fd0b141054d04614af0ce3015d055a7980bce
 
 source-repository-package
     type: git
     location: https://github.com/ucsd-progsys/liquidhaskell
-    tag: 26cad4f05171669949fd92fa5a5f584a4950ca7b
+    tag: c06fd0b141054d04614af0ce3015d055a7980bce
     subdir: liquid-base
 
 source-repository-package
     type: git
     location: https://github.com/ucsd-progsys/liquidhaskell
-    tag: 26cad4f05171669949fd92fa5a5f584a4950ca7b
+    tag: c06fd0b141054d04614af0ce3015d055a7980bce
     subdir: liquid-ghc-prim
 
 source-repository-package
     type: git
     location: https://github.com/ucsd-progsys/liquid-fixpoint
-    tag: a4e303bc55e8f596893e661954e20c983a61215f
+    tag: 90e19918bc51a2c246909ec1e4edba636077c675
