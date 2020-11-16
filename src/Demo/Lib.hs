@@ -1,5 +1,7 @@
 module Demo.Lib where
 
+{-@ LIQUID "--diff" @-}
+
 data Thing = Thing Int
 
 {-@ measure thingVal @-}
@@ -12,4 +14,4 @@ data Box = Box Thing
 
 {-@ mkBox :: Nat -> Box @-}
 mkBox :: Int -> Box
-mkBox n = Box (Thing n)
+mkBox n = Box (Thing (n - 1))

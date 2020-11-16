@@ -1,5 +1,5 @@
 module Demo.Client where
 
-import Demo.Lib (mkBox)
+import Demo.Lib 
 
 boo = mkBox 12
