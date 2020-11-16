@@ -1,5 +1,7 @@
 module Demo.Client where
 
-import Demo.Lib 
+{-@ LIQUID "--diff" @-}
 
-boo = mkBox 12
+{-@ inc :: Nat -> Nat @-}
+inc :: Int -> Int
+inc x = x - 1
