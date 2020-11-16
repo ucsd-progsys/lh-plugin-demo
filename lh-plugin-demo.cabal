@@ -14,7 +14,8 @@ build-type:     Simple
 
 library
   exposed-modules:
-      Demo.Bug
+      Demo.Lib,
+      Demo.Client
   hs-source-dirs:
       src
   build-depends:
