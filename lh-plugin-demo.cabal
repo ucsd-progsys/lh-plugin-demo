@@ -18,6 +18,8 @@ library
   hs-source-dirs:
       src
   build-depends:
+      aeson,
+      hmatrix,
       liquid-base,
       liquid-prelude,
       liquid-containers,
