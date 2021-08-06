@@ -19,7 +19,9 @@ library
   hs-source-dirs:
       src
   build-depends:
+      liquid-ghc-prim,
       liquid-base,
-      liquidhaskell >= 0.8.10
+      liquid-prelude,
+      liquidhaskell
   default-language: Haskell2010
   ghc-options: -fplugin=LiquidHaskell
