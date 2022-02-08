@@ -43,6 +43,8 @@ VSCode with the `Simple GHC (Haskell) Integration` plugin
 
 ![VS Code](vscode.gif)
 
+Note that, by default, the extension uses Haddock, which is currently incompatible with LiquidHaskell. This repo includes custom .vscode settings to disable hadock, but you can also do it manually in the extension settings by removing ```:set -haddock``` from the ```Ghc Simple › Startup Commands: All``` section.
+
 ### Emacs
 
 ![Doom/Emacs with `dante`](emacs.gif)
