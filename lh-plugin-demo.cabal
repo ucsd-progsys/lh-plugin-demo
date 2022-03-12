@@ -14,7 +14,6 @@ build-type:     Simple
 
 library
   exposed-modules:
-      Demo.Hw1,
       Demo.Lib,
       Demo.Client
   hs-source-dirs:
