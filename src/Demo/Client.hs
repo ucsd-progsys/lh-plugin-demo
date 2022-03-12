@@ -23,3 +23,4 @@ testProof :: Proof
 testProof =
   test A ==. Just True
   *** QED
+
