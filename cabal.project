@@ -1,39 +1,44 @@
 packages: .
 
-source-repository-package
-    type: git
-    location: https://github.com/ucsd-progsys/liquidhaskell
-    tag: 1ec324a075140382e13794fe8984f236de4efab4
-
 
 source-repository-package
     type: git
+    location: https://github.com/facundominguez/rest
+    tag: 31e974979c90e910efe5199ee0d3721b791667f6
+
+source-repository-package
+    type: git
     location: https://github.com/ucsd-progsys/liquidhaskell
-    tag: 1ec324a075140382e13794fe8984f236de4efab4
+    tag: 30168430d95c55121de69a02b5be5f2b1a0ab54f
+
+source-repository-package
+    type: git
+    location: https://github.com/ucsd-progsys/liquidhaskell
+    tag: 30168430d95c55121de69a02b5be5f2b1a0ab54f
     subdir: liquid-base
 
 source-repository-package
     type: git
     location: https://github.com/ucsd-progsys/liquidhaskell
-    tag: 1ec324a075140382e13794fe8984f236de4efab4
+    tag: 30168430d95c55121de69a02b5be5f2b1a0ab54f
     subdir: liquid-ghc-prim
 
 source-repository-package
     type: git
     location: https://github.com/ucsd-progsys/liquidhaskell
-    tag: 1ec324a075140382e13794fe8984f236de4efab4
+    tag: 30168430d95c55121de69a02b5be5f2b1a0ab54f
     subdir: liquid-prelude
 
 source-repository-package
     type: git
     location: https://github.com/ucsd-progsys/liquidhaskell
-    tag: 1ec324a075140382e13794fe8984f236de4efab4
+    tag: 30168430d95c55121de69a02b5be5f2b1a0ab54f
     subdir: liquid-containers
 
 
 source-repository-package
     type: git
     location: https://github.com/ucsd-progsys/liquid-fixpoint
-    tag: 2b291c69544897420bc4372f1d4c18dcc2167658
+    tag: b91e279b8dd3a4716372692d2126ffcb90f5e5a3
 
 
