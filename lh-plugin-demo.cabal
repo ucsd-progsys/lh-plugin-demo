@@ -22,6 +22,7 @@ library
       liquid-ghc-prim,
       liquid-base,
       liquid-prelude,
+      liquid-containers,
       liquidhaskell
   default-language: Haskell2010
   ghc-options: -fplugin=LiquidHaskell
