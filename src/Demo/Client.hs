@@ -4,9 +4,9 @@
 
 module Demo.Client where
 
-import Language.Haskell.Liquid.Equational
+import           Language.Haskell.Liquid.Equational
 
-import Demo.Lib
+import           Demo.Lib
 
 bump :: Int -> Int
 bump n = if n > 0 then incr n else 0
@@ -20,7 +20,4 @@ test _ = Nothing
 
 {-@ testProof :: {test A == Just True} @-}
 testProof :: Proof
-testProof =
-  test A ==. Just True
-  *** QED
-
+testProof = test A ==. Just True *** QED
