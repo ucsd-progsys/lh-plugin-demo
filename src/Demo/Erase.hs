@@ -1,7 +1,7 @@
 {-@ LIQUID "--reflection" @-}
 {-@ LIQUID "--ple"        @-}
 
-module Demo.Erase where 
+module Demo.Erase where
 
 import Prelude hiding (id, sum)
 import Language.Haskell.Liquid.ProofCombinators
@@ -15,16 +15,16 @@ isSorted :: List -> Bool
 isSorted Emp = True
 isSorted (Cons x xs) = case xs of
                         Emp -> True
-                        Cons x1 xs1 -> (x <= x1) && (isSorted xs)
+                        Cons x1 xs1 -> (x <= x1) && isSorted xs
 
 
 {-@ reflect insert @-}
 {-@ insert :: x:Int -> {xs:List | isSorted xs} -> {xs:List | isSorted xs} @-}
-insert :: Int -> List -> List 
+insert :: Int -> List -> List
 insert x Emp     = Cons x Emp
 insert x (Cons y ys)
   | x <= y        = Cons x (Cons y ys)
-  | otherwise     = (Cons y (insert x ys)) `withProof` (lem_ins y x ys) 
+  | otherwise     = Cons y (insert x ys) `withProof` lem_ins y x ys
 
 {-@ lem_ins :: y:Int -> {x:Int | y < x} -> {ys:List | isSorted (Cons y ys)} -> {isSorted (Cons y (insert x ys))} @-}
 lem_ins :: Int -> Int -> List -> Bool
