@@ -16,7 +16,6 @@ library
   exposed-modules:
       Demo.Lib,
       Demo.Client,
-      Demo.Test,
       Demo.Erase
   hs-source-dirs:
       src
