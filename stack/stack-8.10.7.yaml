@@ -1,7 +1,7 @@
 resolver: lts-18.27
 compiler: ghc-8.10.7
 packages:
-  - .
+  - ..
 extra-deps:
   - git: https://github.com/ucsd-progsys/liquidhaskell
     commit: a4f2198f894810a729feb0f8d06301790ee8d1fb
