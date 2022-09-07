@@ -81,32 +81,31 @@ absoluteSum vec = go 0 0
           | otherwise = acc
         sz = length vec
 
--- {-@ loop :: lo:Nat -> hi:{Nat|lo <= hi} -> a -> (Btwn lo hi -> a -> a) -> a @-}
--- loop :: Int -> Int -> a -> (Int -> a -> a) -> a
--- loop lo hi base f =  go base lo
---   where
---     go acc i
---       | i < hi    = go (f i acc) (i + 1)
---       | otherwise = acc
+loop :: Int -> Int -> a -> (Int -> a -> a) -> a
+loop lo hi base f =  go base lo
+   where
+     go acc i
+       | i < hi    = go (f i acc) (i + 1)
+       | otherwise = acc
 
--- vectorSum'      :: Vector Int -> Int
--- vectorSum' vec  = loop 0 n 0 body
---   where
---     body i acc  = acc + (vec ! i)
---     n           = length vec
+vectorSum'      :: Vector Int -> Int
+vectorSum' vec  = loop 0 n 0 body
+   where
+     body i acc  = acc + (vec ! i)
+     n           = length vec
 
--- {-@ absoluteSum' :: Vector Int -> Nat @-}
--- absoluteSum' :: Vector Int -> Int
--- absoluteSum' vec = loop 0 n 0 body
---   where
---     body i acc   = acc + (abs' (vec ! i))
---     n            = length vec
+{-@ absoluteSum' :: Vector Int -> Nat @-}
+absoluteSum' :: Vector Int -> Int
+absoluteSum' vec = loop 0 n 0 body
+   where
+     body i acc   = acc + (abs' (vec ! i))
+     n            = length vec
 
--- {-@ dotProduct :: x: Vector Int -> { y: Vector Int | vlen x == vlen y } -> Int @-}
--- dotProduct :: Vector Int -> Vector Int -> Int
--- dotProduct x y = loop 0 (length x) 0 body
---   where
---     body i acc = acc + (x ! i)  *  (y ! i)
+{-@ dotProduct :: x: Vector Int -> { y: Vector Int | vlen x == vlen y } -> Int @-}
+dotProduct :: Vector Int -> Vector Int -> Int
+dotProduct x y = loop 0 (length x) 0 body
+   where
+     body i acc = acc + (x ! i)  *  (y ! i)
 
 -- {-@ type SparseN a N = [(Btwn 0 N, a)] @-}
 
