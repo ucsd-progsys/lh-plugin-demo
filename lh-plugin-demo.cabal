@@ -25,6 +25,7 @@ library
       liquid-base,
       liquid-prelude,
       liquid-containers,
+      liquid-vector,
       liquidhaskell
   default-language: Haskell2010
   ghc-options: -fplugin=LiquidHaskell

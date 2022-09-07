@@ -10,8 +10,10 @@ extra-deps:
       - .
       - liquid-base
       - liquid-prelude
-      - liquid-ghc-prim
+      - liquid-vector
+      - liquid-bytestring
       - liquid-containers
+      - liquid-ghc-prim
   - git: https://github.com/ucsd-progsys/liquid-fixpoint
     commit: 08fa6b6e0001c2da6b96a135523ca56107a3c0d6
   - git: https://github.com/facundominguez/rest
