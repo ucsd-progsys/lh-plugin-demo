@@ -13,9 +13,9 @@ data List = Emp | Cons Int List
 {-@ reflect isSorted @-}
 isSorted :: List -> Bool
 isSorted Emp = True
-isSorted (Cons x xs) = case xs of
+isSorted (Cons x xs) = (case xs of
                         Emp -> True
-                        Cons x1 xs1 -> (x <= x1) && (isSorted xs)
+                        Cons x1 xs1 -> (x <= x1)) && (isSorted xs)
 
 
 {-@ reflect insert @-}
