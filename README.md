@@ -9,17 +9,9 @@ This repo demonstrates how to use [LiquidHaskell](https://github.com/ucsd-progsy
 
 [stack.yaml](stack.yaml) shows
 
-- how to point `stack` at the relevant LH repositories on **hackage**
-
-[stack.yaml.github](stack.yaml.github) shows
-
 - how to point `stack` at the relevant LH repositories on **github**
 
 [cabal.project](cabal.project) shows
-
-- how to point `cabal` to the relevant LH repositories on **hackage**
-
-[cabal.project.github](cabal.project.github) shows
 
 - how to point `cabal` to the relevant LH repositories on **github**
 
