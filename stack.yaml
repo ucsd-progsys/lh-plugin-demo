@@ -13,7 +13,7 @@ extra-deps:
       - liquid-ghc-prim
       - liquid-containers
   - git: https://github.com/ucsd-progsys/liquid-fixpoint
-    commit: 48b997ac1a0b2a7b6d1521beaece6a40cfcf0c5f
+    commit: 98d21934ceda146b4280c73552cc387d0c497f56
 
 nix:
   packages: [cacert, git, hostname, z3]
