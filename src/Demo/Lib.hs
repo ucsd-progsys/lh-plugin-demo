@@ -3,7 +3,16 @@ module Demo.Lib where
 {-@ LIQUID "--reflection" @-}
 
 import Language.Haskell.Liquid.ProofCombinators
-  
+
+
+{-@ type Pos = {v:Int | 0 < v} @-}
+
+{-@ incr :: Pos -> Pos @-}
+incr :: Int -> Int
+incr x = x + 1
+
+
+
 {-@
 data Monkey =
   M { number :: Nat,
