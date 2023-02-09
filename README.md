@@ -14,7 +14,7 @@ This repo demonstrates how to use [LiquidHaskell](https://github.com/ucsd-progsy
 [cabal.project](cabal.project) shows
 
 - how to point `cabal` to the relevant LH repositories on **github**
-- only works with ghc-8.10.7
+- only works with ghc-9.0.2
 
 ## GHCi Integration
 
