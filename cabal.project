@@ -3,10 +3,10 @@ packages: .
 source-repository-package
     type: git
     location: https://github.com/ucsd-progsys/liquidhaskell
-    tag: c06a3bb68c1bc83d2227158de0276713b83f13bb
-    subdir: . liquid-base liquid-ghc-prim liquid-prelude liquid-containers
+    tag: fc4a89b91fad8b7a02b72901381d4358a470e230
+    subdir: . liquidhaskell-boot liquid-prelude
 
 source-repository-package
     type: git
     location: https://github.com/ucsd-progsys/liquid-fixpoint
-    tag: 98d21934ceda146b4280c73552cc387d0c497f56
+    tag: eb339f9abdf073f8d9f0c446c309006fdf49ed42
