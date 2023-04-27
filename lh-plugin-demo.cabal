@@ -22,7 +22,9 @@ library
   build-depends:
       base,
       containers,
+      vector,
       liquid-prelude,
+      liquid-vector,
       liquidhaskell
   default-language: Haskell2010
   ghc-options: -fplugin=LiquidHaskell

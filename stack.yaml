@@ -12,6 +12,7 @@ extra-deps:
       - .
       - liquidhaskell-boot
       - liquid-prelude
+      - liquid-vector
   - git: https://github.com/ucsd-progsys/liquid-fixpoint
     commit: eb339f9abdf073f8d9f0c446c309006fdf49ed42
 

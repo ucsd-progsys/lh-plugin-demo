@@ -7,6 +7,7 @@ import Prelude hiding (id, sum)
 import Language.Haskell.Liquid.ProofCombinators
 import Data.Set (Set)
 import qualified Data.Set as Set
+import Data.Vector
 
 data List = Emp | Cons Int List
 
@@ -30,3 +31,8 @@ lem_ins :: Int -> Int -> List -> Bool
 lem_ins y x Emp = True
 lem_ins y x (Cons y1 ys) = if y1 < x then lem_ins y1 x ys else True
 
+-- This function is here only to check that Liquid Haskell
+-- is picking up assumptions from liquid-vector.
+{-@ fail vectorTest @-}
+vectorTest :: Vector Int -> Int
+vectorTest v = v Data.Vector.! 10
