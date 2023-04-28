@@ -11,10 +11,14 @@ This repo demonstrates how to use [LiquidHaskell](https://github.com/ucsd-progsy
 
 - how to point `stack` at the relevant LH repositories on **github**
 
+[stack.yaml](stack/stack-9.0.2.yaml) shows
+
+- how to point `stack` at the relevant LH packages on **hackage**
+
 [cabal.project](cabal.project) shows
 
 - how to point `cabal` to the relevant LH repositories on **github**
-- only works with ghc-8.10.7
+- only works with ghc-9.2.5
 
 ## GHCi Integration
 
