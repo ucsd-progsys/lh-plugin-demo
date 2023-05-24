@@ -11,7 +11,7 @@ This repo demonstrates how to use [LiquidHaskell](https://github.com/ucsd-progsy
 
 - how to point `stack` at the relevant LH repositories on **github**
 
-[stack.yaml](stack/stack-9.0.2.yaml) shows
+[stack/stack-9.0.2.yaml](stack/stack-9.0.2.yaml) shows
 
 - how to point `stack` at the relevant LH packages on **hackage**
 
