@@ -1,3 +1,5 @@
+{-# OPTIONS_GHC -fplugin=LiquidHaskell #-}
+
 module Demo.Lib where
 
 import Data.Set
