@@ -16,6 +16,7 @@ extra-deps:
       - liquid-vector
   - git: https://github.com/ucsd-progsys/liquid-fixpoint
     commit: b6c3e11ce19629cced047eb2df748ec336148451
+  - os-string-2.0.2.1@sha256:0bf4ff8f387d7fd05a43c18fa677dd02259c99d63c2d02c5823f152736513bef,3261
 
 nix:
   packages: [cacert, git, hostname, z3]
