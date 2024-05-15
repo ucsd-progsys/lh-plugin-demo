@@ -1,20 +1,21 @@
-resolver: lts-20.1
+resolver: lts-21.13
 packages:
   - .
 extra-deps:
-  - hashable-1.3.5.0
+  - hashable-1.4.4.0
   - rest-rewrite-0.4.1
   - smtlib-backends-0.3
   - smtlib-backends-process-0.3
+  - os-string-2.0.2.1@sha256:0bf4ff8f387d7fd05a43c18fa677dd02259c99d63c2d02c5823f152736513bef,3261
   - git: https://github.com/ucsd-progsys/liquidhaskell
-    commit: fc4a89b91fad8b7a02b72901381d4358a470e230
+    commit: b3a5ac99a534a539e9758fd008f14d66b241682c
     subdirs:
       - .
       - liquidhaskell-boot
       - liquid-prelude
       - liquid-vector
   - git: https://github.com/ucsd-progsys/liquid-fixpoint
-    commit: eb339f9abdf073f8d9f0c446c309006fdf49ed42
+    commit: b6c3e11ce19629cced047eb2df748ec336148451
 
 nix:
   packages: [cacert, git, hostname, z3]
