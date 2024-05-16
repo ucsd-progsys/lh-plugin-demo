@@ -10,10 +10,12 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        cabal: ["3.6"]
+        cabal: ["3.10.3.0"]
         ghc:
-          - "9.2.5"
-          - "9.0.2"
+          - "9.2.8"
+          - "9.4.7"
+          - "9.6.3"
+          - "9.8.1"
 
     steps:
       - uses: actions/checkout@v3
@@ -26,7 +28,7 @@ jobs:
           version: "4.8.7"
 
       - name: Setup Stack
-        uses: haskell/actions/setup@v2
+        uses: haskell-actions/setup@v2
         with:
           ghc-version: ${{ matrix.ghc }}
           cabal-version: ${{ matrix.cabal }}
@@ -39,7 +41,7 @@ jobs:
           path: |
             ~/.stack
             .stack-work
-          key: ${{ runner.os }}-${{ matrix.ghc }}-stack-${{ hashFiles('**/*.cabal', './stack/stack-${{ matrix.ghc }}.yaml', './stack/stack-${{ matrix.ghc }}.yaml.lock') }}
+          key: ${{ runner.os }}-${{ matrix.ghc }}-stack-${{ hashFiles('**/*.cabal', './stack/stack-${{ matrix.ghc }}.yaml') }}
 
       - name: Build
         run: stack build --no-terminal --stack-yaml=./stack/stack-${{ matrix.ghc }}.yaml

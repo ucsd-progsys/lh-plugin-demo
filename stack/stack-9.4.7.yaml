@@ -1,0 +1,15 @@
+resolver: lts-21.21
+packages:
+  - ..
+extra-deps:
+  - rest-rewrite-0.4.3
+  - smtlib-backends-0.3
+  - smtlib-backends-process-0.3
+  - liquidhaskell-0.9.4.7.0
+  - liquidhaskell-boot-0.9.4.7.0
+  - liquid-fixpoint-0.9.4.7
+  - liquid-prelude-0.9.2.8.1
+  - liquid-vector-0.12.3.1.2
+
+nix:
+  packages: [cacert, git, hostname, z3]
