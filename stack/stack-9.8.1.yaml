@@ -10,7 +10,7 @@ extra-deps:
   - liquidhaskell-0.9.8.1
   - liquidhaskell-boot-0.9.8.1
   - liquid-fixpoint-0.9.6.3
-  - liquid-prelude-0.9.2.8.1
+  - liquid-prelude-0.9.2.8.1@rev:1
   - liquid-vector-0.13.1.0.1
 
 nix:

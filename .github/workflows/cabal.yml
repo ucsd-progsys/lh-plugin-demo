@@ -15,7 +15,12 @@ jobs:
           - "9.2.8"
           - "9.4.7"
           - "9.6.3"
-          - "9.8.1"
+        include:
+          - repo: "hackage"
+          - ghc: "9.8.1"
+            repo: "github"
+          - ghc: "9.8.1"
+            repo: "hackage"
 
     steps:
       - uses: actions/checkout@v3
@@ -33,6 +38,16 @@ jobs:
           ghc-version: ${{ matrix.ghc }}
           cabal-version: ${{ matrix.cabal }}
 
+      - name: Configure the build
+        run: |
+          if [ ${{ matrix.repo }} == "github" ]
+          then
+            cp cabal.project.github cabal.project
+          fi
+          cabal configure --enable-tests --enable-benchmarks --disable-documentation
+          # generate dist-newstyle/cache/plan.json
+          cabal build all --dry-run
+
       - name: Cache ~/.cabal/packages, ~/.cabal/store and dist-newstyle
         uses: actions/cache@v3
         with:
@@ -40,7 +55,7 @@ jobs:
             ~/.cabal/packages
             ~/.cabal/store
             dist-newstyle
-          key: ${{ runner.os }}-${{ matrix.ghc }}-cabal-${{ hashFiles('**/*.cabal') }}
+          key: ${{ runner.os }}-${{ matrix.ghc }}-cabal-${{ hashFiles('**/*.cabal', './dist-newstyle/cache/plan.json') }}
 
       - name: Update package list
         run: cabal update
