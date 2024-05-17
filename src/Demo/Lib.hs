@@ -1,3 +1,5 @@
+{-# OPTIONS_GHC -fplugin=LiquidHaskell #-}
+
 module Demo.Lib where
 
 import Data.Set
@@ -16,7 +18,7 @@ elts (x:xs) = singleton x `union` elts xs
 
 {-@ rev :: xs:_ -> {v:_ | elts v == elts xs} @-}
 rev :: [a] -> [a]
-rev = go [] 
+rev = go []
   where
     {-@ go :: acc:_ -> xs:_ -> {v:_ | elts v == union (elts acc) (elts xs)} @-}
     go acc []     = acc

@@ -11,14 +11,18 @@ This repo demonstrates how to use [LiquidHaskell](https://github.com/ucsd-progsy
 
 - how to point `stack` at the relevant LH repositories on **github**
 
-[stack/stack-9.0.2.yaml](stack/stack-9.0.2.yaml) shows
+[stack/stack-*.yaml](stack/) shows
 
 - how to point `stack` at the relevant LH packages on **hackage**
 
-[cabal.project](cabal.project) shows
+[cabal.project.github](cabal.project.github) shows
 
 - how to point `cabal` to the relevant LH repositories on **github**
-- only works with ghc-9.2.5
+- only works with ghc-9.8.1
+
+No `cabal.project` file is needed for the releases of `liquidhaskell` in hackage.
+`cabal-install` should pick the appropriate version for each compiler (supported GHCs:
+9.2.8, 9.4.7, 9.6.3, 9.8.1)
 
 ## GHCi Integration
 

@@ -1,3 +1,5 @@
+{-# OPTIONS_GHC -fplugin=LiquidHaskell #-}
+
 {-@ LIQUID "--reflection"     @-}
 {-@ LIQUID "--ple"            @-}
 {-@ LIQUID "--no-termination" @-}
@@ -23,4 +25,3 @@ testProof :: Proof
 testProof =
   test A ==. Just True
   *** QED
-
