@@ -9,6 +9,8 @@ extra-deps:
   - rest-rewrite-0.4.3
   - smtlib-backends-0.3@rev:2
   - smtlib-backends-process-0.3@rev:2
+  - linear-generics-0.2.3@sha256:7df8ed37daf0013a347b90d9e04a49e7bb959b089bc9cb45e0d5cb05186cc9cf,6285
+  - linear-base-0.4.0@sha256:f7c0c832daa0cc97de121ffa34b6cfe72f7cf7f3ea7947d8f1ccac083c91c065,6841
   - git: https://github.com/ucsd-progsys/liquidhaskell
     commit: 4b20537529b2143cab0214564422c94fb93df9d9
     subdirs:

@@ -26,6 +26,7 @@ library
   if impl(ghc >= 9.2)
     build-depends:
       base,
+      linear-base,
       containers,
       vector
   else

@@ -40,6 +40,20 @@ packages:
   original:
     hackage: smtlib-backends-process-0.3@rev:2
 - completed:
+    hackage: linear-generics-0.2.3@sha256:7df8ed37daf0013a347b90d9e04a49e7bb959b089bc9cb45e0d5cb05186cc9cf,6285
+    pantry-tree:
+      sha256: 9875de3e2d7f7c6fa6345e887a865714524f9008e860929864f44cf6cbacae65
+      size: 2819
+  original:
+    hackage: linear-generics-0.2.3@sha256:7df8ed37daf0013a347b90d9e04a49e7bb959b089bc9cb45e0d5cb05186cc9cf,6285
+- completed:
+    hackage: linear-base-0.4.0@sha256:f7c0c832daa0cc97de121ffa34b6cfe72f7cf7f3ea7947d8f1ccac083c91c065,6841
+    pantry-tree:
+      sha256: 81d29114685e1022c33754c4ac39b405b3b575e67e80305bc4439b0da2dd9624
+      size: 9096
+  original:
+    hackage: linear-base-0.4.0@sha256:f7c0c832daa0cc97de121ffa34b6cfe72f7cf7f3ea7947d8f1ccac083c91c065,6841
+- completed:
     commit: 4b20537529b2143cab0214564422c94fb93df9d9
     git: https://github.com/ucsd-progsys/liquidhaskell
     name: liquidhaskell
