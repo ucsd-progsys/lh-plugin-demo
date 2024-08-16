@@ -5,13 +5,32 @@
 module Demo.Client (rev, toLinear, toLinear3) where
 
 {-@ LIQUID "--reflection"  @-}
+{-@ LIQUID "--ple"         @-}
+{-@ LIQUID "--short-names" @-}
+{-@ LIQUID "--exact-data-cons" @-}
+{-@ LIQUID "--higherorder" @-}
+{-@ LIQUID "--no-environment-reduction" @-}
+{-@ LIQUID "--prune-unsorted" @-}
 
-{-    LIQUID "--extensionality" @-}
 
 import qualified Unsafe.Linear as Unsafe
 
 import Prelude hiding (sum)
 import Language.Haskell.Liquid.Equational
+
+{-@ data Array a = Arr {  lst   :: [a]
+                       ,  left  :: Nat
+                       ,  right :: { v: Nat | v >= left && v - left == len lst }
+                       ,  tok   :: Int
+                       }
+  @-}
+
+data Array a = Arr {  lst   :: [a]  -- lst only contains from left ... right-1
+                   ,  left  :: Int
+                   ,  right :: Int
+                   ,  tok   :: Int }
+               deriving (Eq, Show)
+
 
 {-    @ assume toLinear :: f:_ -> { g:_ | f == g} @-}
 
