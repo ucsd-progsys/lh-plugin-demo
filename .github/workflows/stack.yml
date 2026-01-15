@@ -10,17 +10,19 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        cabal: ["3.10.3.0"]
         ghc:
           - "9.2.8"
           - "9.4.7"
           - "9.6.3"
+          - "9.8.1"
+          - "9.10.3"
+          - "9.12.2"
         include:
           - repo: "hackage"
-          - ghc: "9.8.1"
-            repo: "github"
-          - ghc: "9.8.1"
-            repo: "hackage"
+#          - ghc: "9.14.1"
+#            repo: "github"
+#          - ghc: "9.14.1"
+#            repo: "hackage"
 
     steps:
       - uses: actions/checkout@v3
@@ -35,8 +37,6 @@ jobs:
       - name: Setup Stack
         uses: haskell-actions/setup@v2
         with:
-          ghc-version: ${{ matrix.ghc }}
-          cabal-version: ${{ matrix.cabal }}
           enable-stack: true
           stack-version: "latest"
 
