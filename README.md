@@ -7,22 +7,20 @@ This repo demonstrates how to use [LiquidHaskell](https://github.com/ucsd-progsy
 - how to tell GHC to invoke the plugin
 - how to specify the relevant LH wrapper packages as dependencies
 
-[stack.yaml](stack.yaml) shows
-
-- how to point `stack` at the relevant LH repositories on **github**
-
 [stack/stack-*.yaml](stack/) shows
 
 - how to point `stack` at the relevant LH packages on **hackage**
+- building with `stack --stack-yaml=stack/stack-<ghc version>.yaml build`
 
 [cabal.project.github](cabal.project.github) shows
 
-- how to point `cabal` to the relevant LH repositories on **github**
-- only works with ghc-9.8.1
+- how to point `cabal` to the relevant LH repositories on **github** (only works with ghc-9.14.1)
+- building with `cabal build --project-file=cabal.project.github`
 
 No `cabal.project` file is needed for the releases of `liquidhaskell` in hackage.
 `cabal-install` should pick the appropriate version for each compiler (supported GHCs:
-9.2.8, 9.4.7, 9.6.3, 9.8.1)
+9.2.8, 9.4.7, 9.6.3, 9.8.1, 9.10.1, 9.12.2). Build with `cabal build` if you have
+a supported GHC in your PATH.
 
 ## GHCi Integration
 
@@ -44,7 +42,7 @@ VSCode with the `Simple GHC (Haskell) Integration` plugin
 
 ![VS Code](vscode.gif)
 
-Note that, by default, the extension uses Haddock, which is currently incompatible with LiquidHaskell. This repo includes custom .vscode settings to disable hadock, but you can also do it manually in the extension settings by removing ```:set -haddock``` from the ```Ghc Simple › Startup Commands: All``` section.
+Note that, by default, the extension uses Haddock, which used to be incompatible with LiquidHaskell before `ghc-9.14.1`. This repo includes custom .vscode settings to disable haddock, but you can also do it manually in the extension settings by removing ```:set -haddock``` from the ```Ghc Simple › Startup Commands: All``` section.
 
 ### Emacs
 

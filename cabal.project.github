@@ -4,10 +4,21 @@ packages: .
 source-repository-package
     type: git
     location: https://github.com/ucsd-progsys/liquidhaskell
-    tag: 4b20537529b2143cab0214564422c94fb93df9d9
+    tag: 4f94bd307ce7776312b5abaa495916884870e2a1
     subdir: . liquidhaskell-boot liquid-prelude liquid-vector
 
 source-repository-package
     type: git
     location: https://github.com/ucsd-progsys/liquid-fixpoint
-    tag: 5b39f1a3c49190f9e438f9cdefd7d2635c5bf7f2
+    tag: 98bb6d95d54c2f49d5f7366adb3387b780b3d787
+
+-- GHC 9.14 compatibility
+allow-newer:
+   base
+  ,template-haskell
+  ,time
+  ,containers
+  ,ghc-bignum
+
+constraints:
+  aeson >= 2.2.3.0
