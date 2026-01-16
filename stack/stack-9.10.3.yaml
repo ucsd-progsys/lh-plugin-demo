@@ -1,0 +1,9 @@
+resolver: lts-24.28
+packages:
+  - ..
+extra-deps:
+  - liquid-prelude-0.9.10.1.2
+  - liquid-vector-0.13.1.0.1
+
+nix:
+  packages: [cacert, git, hostname, z3]
