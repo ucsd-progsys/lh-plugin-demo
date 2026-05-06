@@ -2,10 +2,10 @@
 
 This repo demonstrates how to use [LiquidHaskell](https://github.com/ucsd-progsys/liquidhaskell) as a GHC plugin.
 
-`lh-plugin-demo.cabal` shows 
+`lh-plugin-demo.cabal` shows
 
 - how to tell GHC to invoke the plugin
-- how to specify the relevant LH wrapper packages as dependencies
+- how to specify the relevant LH packages as dependencies
 
 [stack/stack-*.yaml](stack/) shows
 
@@ -19,7 +19,7 @@ This repo demonstrates how to use [LiquidHaskell](https://github.com/ucsd-progsy
 
 No `cabal.project` file is needed for the releases of `liquidhaskell` in hackage.
 `cabal-install` should pick the appropriate version for each compiler (supported GHCs:
-9.2.8, 9.4.7, 9.6.3, 9.8.1, 9.10.1, 9.12.2). Build with `cabal build` if you have
+9.2.8, 9.4.7, 9.6.3, 9.8.1, 9.10.1, 9.12.2, 9.14.1). Build with `cabal build` if you have
 a supported GHC in your PATH.
 
 ## GHCi Integration
