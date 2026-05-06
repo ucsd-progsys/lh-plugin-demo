@@ -6,7 +6,7 @@ on:
 
 jobs:
   build:
-    name: ghc ${{ matrix.ghc }}
+    name: ghc ${{ matrix.ghc }} ${{ matrix.repo }}
     runs-on: ubuntu-latest
     strategy:
       matrix:
